@@ -16,6 +16,10 @@ def print_the_thing(entry):
     else:
         print("Goodbye")
 
+def print_many_things(integer):
+    h = integer.get()
+
+
 
 def main():
     """ Constructs a GUI with stuff on it. """
@@ -65,7 +69,7 @@ def main():
     entry_box = ttk.Entry(frame)
     entry_box.grid(row = 1, column = 0)
 
-    entry_button = ttk.Button(frame)
+    entry_button = ttk.Button(frame, text = 'Test')
     entry_button['command'] = lambda: print_the_thing(entry_box)
     entry_button.grid(row = 1, column = 1 )
 
@@ -98,6 +102,7 @@ def main():
     entry_box2.grid(row = 2, column = 0)
 
     entry_button2 = ttk.Button(frame)
+    entry_button2['command'] = lambda:
 
 
     # -------------------------------------------------------------------------

@@ -9,6 +9,13 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 import tkinter
 from tkinter import ttk
 
+def print_the_thing(entry):
+    c = entry.get()
+    if c == 'ok':
+        print("Hello")
+    else:
+        print("Goodbye")
+
 
 def main():
     """ Constructs a GUI with stuff on it. """
@@ -47,7 +54,7 @@ def main():
     button['command'] = lambda : print('Hello')
 
     # -------------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # DONE: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
@@ -59,8 +66,7 @@ def main():
     entry_box.grid()
 
     entry_button = ttk.Button(frame)
-    s = entry_box.get()
-    entry_button['command'] = lambda: print('hi')
+    entry_button['command'] = lambda: print_the_thing(entry_box)
     entry_button.grid()
 
 

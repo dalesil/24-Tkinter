@@ -63,11 +63,11 @@ def main():
     # -------------------------------------------------------------------------
 
     entry_box = ttk.Entry(frame)
-    entry_box.grid()
+    entry_box.grid(row = 1, column = 0)
 
     entry_button = ttk.Button(frame)
     entry_button['command'] = lambda: print_the_thing(entry_box)
-    entry_button.grid()
+    entry_button.grid(row = 1, column = 1 )
 
 
     # -------------------------------------------------------------------------
@@ -93,6 +93,12 @@ def main():
     #      s = entry_box.get()
     #      n = int(s)
     ####################################################################
+
+    entry_box2 = ttk.Entry(frame)
+    entry_box2.grid(row = 2, column = 0)
+
+    entry_button2 = ttk.Button(frame)
+
 
     # -------------------------------------------------------------------------
     # DONE: 8. As time permits, do other interesting GUI things!

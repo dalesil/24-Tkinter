@@ -16,8 +16,10 @@ def print_the_thing(entry):
     else:
         print("Goodbye")
 
-def print_many_things(integer):
-    h = integer.get()
+def print_many_things(e, e2):
+    contents_number = int(e2.get())
+    content_words = e.get()
+    print(content_words * contents_number)
 
 
 
@@ -75,7 +77,7 @@ def main():
 
 
     # -------------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
@@ -101,8 +103,9 @@ def main():
     entry_box2 = ttk.Entry(frame)
     entry_box2.grid(row = 2, column = 0)
 
-    entry_button2 = ttk.Button(frame)
-    entry_button2['command'] = lambda:
+    entry_button2 = ttk.Button(frame, text = "test")
+    entry_button2['command'] = (lambda: print_many_things(entry_box, entry_box2))
+    entry_button2.grid()
 
 
     # -------------------------------------------------------------------------
